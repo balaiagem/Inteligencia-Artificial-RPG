@@ -18,8 +18,9 @@
     arraydeerros = []
     arraydetentativa = []
     rede = buildNetwork(69, 100, 100, 5)
-    base = SupervisedDataSet(69, 5)
+    base = SupervisedDataSet(69, 5) 
     print(rede)
+
     arquivo = open('base.txt', 'r')
     arquivo.seek(0, 0)
     for linha in arquivo.readlines():
@@ -56,7 +57,8 @@
     plt.title('Gráfico de aprendizado de máquina')
     plt.xlabel('Nº da Tentativa')
     plt.ylabel('Valor do Erro')
+    plt.savefig('grafico.jpg', format='jpg')
     plt.show()
-    plt.savefig('Grafico.png', format='png')
+    
 
-    rede.activate([10,1,1,6,2,13,15,15,10,1,3,0,0,2,2,0,14,10,16,11,20,18,5,0,5,0,0,4,0,4,4,4,0,4,0,3,0,0,0,0,0,9,0,4,4,0,2,0,0,0,0,4,2,5,4,0,0,0,0,5,0,5,5,0,2,5,9,0,4])
+    rede.activate([1,6,2,6,2,27,18,17,11,2,7,1,0,3,3,0,20,13,15,13,13,12,5,1,1,1,1,1,1,1,1,1,1,7,1,2,1,1,1,1,1,1,1,1,1,1,9,1,1,1,1,7,5,1,1,1,1,1,1,6,1,1,1,1,9,1,1,1,1])
